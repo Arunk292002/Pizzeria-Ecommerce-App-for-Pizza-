@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top">
+  <a class="navbar-brand d-flex align-items-center" routerLink="/">
+    <span class="me-2">Pizzeria</span>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/The_Pizza_Company_Logo_%282023%29.svg" width="70" height="70" class="me-2" alt="pizza-logo">  
+  </a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/order">Order Pizza</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/build">Build Your Pizza</a>
+      </li>
+    </ul>
+    <a routerLink="/cart" class="btn btn-warning">
+      🛒 Shopping Cart <span *ngIf="cartLength>0" class="bg-dark text-light w-10">{{cartLength}}</span>
+    </a>
+  </div>
+</nav>
+<router-outlet></router-outlet>

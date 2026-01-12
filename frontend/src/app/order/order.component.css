@@ -1,0 +1,16 @@
+.type{
+    display: block;
+    width: 25px; 
+    height:25px;
+    border:1px solid;
+}
+.dot{
+    justify-content: center;
+    display: flex;
+    font-size: 32px;
+    align-items: center;
+    height: 14px;
+}
+.container{
+    max-width: 1334px;
+}

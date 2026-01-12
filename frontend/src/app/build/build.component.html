@@ -1,0 +1,14 @@
+<div class="container text-center">
+    <p>Pizzeria now gives an option to build your pizza. Customize your pizza by choosing ingridents from the list given below.</p>
+    <table class="table table-hover table-stripped table-bordered table-sm w-50 mx-auto text-center align-middle">
+        <tbody>
+            <tr *ngFor="let ingridient of ingridents">
+                <td><img [src]="ingridient.image" [alt]="ingridient.tname" height="100" width="100"></td>
+                <td><p>{{ingridient.tname | titlecase}}  {{ingridient.price|currency:'INR'}}</p></td>
+                <td><input type="checkbox" [checked]="isChecked(ingridient.tname)" #cb (change)="addCost(cb.checked, ingridient.price,ingridient.tname)"><label> Add</label></td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>Total Cost: {{totalCost|currency:'INR'}}</h4>
+    <button (click)="sendIg()" class="btn btn-warning">Build Ur Pizza</button>
+</div>
